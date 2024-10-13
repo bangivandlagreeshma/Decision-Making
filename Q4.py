@@ -13,3 +13,20 @@ Sample Output:
 Loss : Rs.12.00
 
 '''
+
+def determine_profit_or_loss(totalCost, sp_per_banana):
+    cost_per_banana = totalCost / 12
+    total_sp = sp_per_banana * 12
+
+    profit_or_loss = total_sp - totalCost
+
+    if profit_or_loss > 0:
+        return f"Profit : Rs.{profit_or_loss:.2f}"
+    elif profit_or_loss < 0:
+        return f"Loss : Rs.{-profit_or_loss:.2f}"
+    else:
+        return "No Profit No Loss"
+totalCost = float(input())
+sp_per_banana = float(input())
+result = determine_profit_or_loss(totalCost, sp_per_banana)
+print(result)
